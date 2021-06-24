@@ -1,0 +1,71 @@
+
+<div class="container">
+  <div class="jobsPosted">
+    <p>View Trends</p>
+  </div>
+  <div class="chart-wrapper">
+    <div class="chartLabel">
+      <p class="chartLabelText"> Skill Requirement Numbers </p>
+    </div>
+    <canvas baseChart class="chart" [datasets]="skillChartData" [labels]="skillChartLabels"
+      [options]="skillChartOptions" [plugins]="skillChartPlugins" [legend]="skillChartLegend"
+      [chartType]="skillChartType">
+    </canvas>
+  </div>
+
+  <div class="rowChart">
+    <div class="chart-wrapper">
+      <div class="chartLabel">
+        <p class="chartLabelText"> Location Wise Opportunities </p>
+      </div>
+      <canvas baseChart [data]="locationChartData" [labels]="locationChartLabels" [chartType]="locationChartType" [legend]="pieLegends">
+      </canvas>
+    </div>
+
+
+    <div class="chart-wrapper">
+      <div class="chartLabel">
+        <p class="chartLabelText"> Hiring Manager Wise Opportunities </p>
+      </div>
+      <canvas baseChart [data]="hiringManagerChartData" [labels]="hiringManagerChartLabels"
+        [chartType]="hiringManagerChartType"
+        [legend]="pieLegends"
+        
+        >
+      </canvas>
+    </div>
+  </div>
+
+
+  <div class="rowChart">
+    <div class="chart-wrapper">
+      <div class="chartLabel">
+        <p class="chartLabelText"> RadarMap For Skills </p>
+      </div>
+      <canvas baseChart [datasets]="radarChartData" [labels]="radarChartLabels" [chartType]="radarChartType"
+      [options]="radarChartOptions"></canvas>
+    </div>
+
+  </div>
+<div class="rowChart">
+  <div class="chart-wrapper">
+    <div class="chartLabel">
+      <p class="chartLabelText"> Profile Based Job Postings</p>
+    </div>
+    <canvas baseChart [data]="profileChartData" [labels]="profileChartLabels" [chartType]="profileChartType"
+    [legend]="pieLegends"
+    >
+    </canvas>
+  </div>
+  <div class="chart-wrapper">
+    <div class="chartLabel">
+      <p class="chartLabelText"> Employment Type Based Job Postings</p>
+    </div>
+    <canvas baseChart [data]="employmentTypeData" [labels]="employmentTypeChartLabels" [chartType]="profileChartType"
+    [legend]="pieLegends"
+    >
+    </canvas>
+  </div>
+</div>
+
+</div>
